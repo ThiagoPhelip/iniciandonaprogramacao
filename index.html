@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Primeira pagina html de estudos"> <!-- Se fizer uma buscar com essa descrição, ira conduzir para essa pagina -->
+    <title>www.petlifeonebitcodetreinamento.com.br</title> <!-- Esse é o nome da pagina que aparece no navegador. -->
+</head>
+<body>
+    <header>
+        <a href="index.html"> <!-- Utiliza o href como tag para pode linkar um site ou alguma coisa ao menu ou imagem, aqui vamos linkar a pagina inicial a uma imagem de logo inicial, que quando clicado voltara a pagina inicial. -->
+        <img src="img/logo.svg" alt="Imagem inicial"> <!-- Utilizando a tag img, podemos inserir a imagem desejada, que esteja dentro do nosso projeto, nesse exemplo, colocamos o arquivo logo.svg, que esta dentro da nossa pasta img no nosso projeto, para que a imagem se tornar um link, a tag precisa estar dentro da tag referenciada, neste caso a imagem do logo, esta dentro da ref index.html, que é a pagina inicial. -->
+        </a> 
+       
+        <nav><!-- A tag navé  utilizado para criar uma lista de menu e fazer a navegção dentro da pagina, entre as sessoes-->
+        <a href="#inicio">Início</a> <!--Ao criar uma sessão é importante colocar em minusculo e sem acento, para evitar erros, as # indicam que são as sessões.-->
+        <a href="#clinica">Clínica</a>
+        <a href="#farmacia">Farmácia</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="contato.html" target="_blank">Contato</a> <!--Ao criar uma sessão desta maneira é feito o redirecionamento a uma outra pagina que foi criada, nesse exemplo, criamos a pagina contato e fizemos o clink no menu contato.-->
+        <a href="https://www.google.com/">Pesquise-nos no google!</a> <!-- Criando desta forma, referenciamos o menu a um link de uma pagina existente, sempre usar o http ou https:// ao inserir o link de uma pagina.-->
+    
+    </nav>
+    <main><!-- A tag main, é utilizado para definir o conteudo principal da pagina e dentro dele, colocamos todas as sessões criadas na tag nav-->
+       <section id="inicio"> <!-- Para iniciar a criação dos conteudo das sessões criadas, usamos a tag section e dentro dela, colocamos as informações que as sessões terão. -->
+         <img src="img/start-img.svg" alt="Foto Principal" width="580" height="580"> <!-- Dentro da section criamos o img com a imagem principal e dentro, inserindo alguns atributos como alt(onde é inserido uma descrição para a imagem, caso apresente um erro, temos os atributos de altura e largura (width="580" height="580") que é utilizado para definir o tamanho da imagem que o navegador irá apresentar.) o img deve ficar fora da div--> 
+           <div> <!-- Serve de divisão dos conteudos da pagina e tem uma importancia na utilização do css -->
+            <!--   Vamos criar dentro deste div o titulo da pagina, o paragrafo ou texto de apresentação e 1 links. -->
+            <h1>Garanta uma vida longa e cheia de alegria para o seu pet.</h1>
+            <p>A pet life é uma clinica especializa, com profissionais altamente qualificados, que oferece os melhores tratamentos para o seu pet.</p>
+            <a href="https://wa.me/+5541996634544" target="_blank">Marque uma Consulta.</a> <!-- essa tag sera criado como um botão --> <!-- Desta maneira, quando alguem clicar no botão marque uma consulta, a pagina do whastapp web ira abrir e uma conversa com o numero ira iniciar, o atributo target é utilizado para que, ao clicar no botão, uma nova aba no navegador abra com o conteudo referenciado no botão e nao altere  a pagina atual.-->
+            <a href="#clinica">Conheça a nossa clinica</a>   
+        </div>  
+        </section>
+
+        <section id="clinica"> <!-- Criado a tag id, que possui o mesmo nome da sessão que foi criada, para que quando for clicado, seja direcionado para a sessão vinculada. O id sempre deve ter o nome da sessão, sem a #.-->
+            <div>                
+                <h2>Nossa Clínica é de ultima geração, com os melhores equipamentos e na melhor localização para poder atende-lo.</h2>
+                <p>Nossa clínica veterinária é o local onde a paixão pelos animais se une à excelência em cuidados veterinários.
+                    Sob a liderança da Dra. Vivien Reid, uma profissional altamente qualificada e comprometida, oferecemos
+                    serviços de saúde e bem-estar para animais de estimação de todas as espécies. Venha conhecer nossa clínica e desfrute
+                    da atenção personalizada e do carinho que seu pet merece.
+                </p>
+                <!--Agora vamos criar uma list que demonstrará os serviços da clinica, para isso, existem 2 tipos de tag, a ol e a ul, a lista ol(ordered list, quando criada, ela exibira numerais na frente de cada item exemplo: 1-raio x 2- imobilização, etc..) a ul (unordered list) quando criada, os itens são exibidos com marcadores (pontos, círculos ou quadrados). -->
+                <!-- Personalizando marcadores:Você pode alterar o estilo dos marcadores com CSS: <ul style="list-style-type: square;">  </ul> (coloca o marcador quadrado, type: circle e type: disc é o padrão) -->
+                   <h1> Nossa lista de Serviços.</h1>
+                   <ul> <!-- Lista tipo não ordenada, a lista fica dentro da div-->
+                    <li>Consultas de rotina e exames de saúde abrangentes</li> <!-- A tag li é utilizada dentro da tag de lista para informar os conteudo e para cada conteudo se usa um li -->
+                    <li>Vacinação e imunização</li>
+                    <li>Cirurgias e procedimentos veterinários</li>
+                    <li>Tratamento e controle de doenças</li>
+                    <li>Odontologia veterinária</li>
+                    <li>Odontologia veterinária</li>
+                    <li>Atendimento de emergência 24 horas</li>
+                    <li>Nutrição e aconselhamento alimentar personalizado</li>
+                   </ul>
+            </div>
+            <img src="img/clinic-img.svg" alt="Imagem da sessção clinica" width="480" height="480" loading="lazy"> <!-- Dentro desta tag imag, temos o atributo loading que possui 2 caracteristica o lazy, que um carregamento mais lento e o eager, que é um carregamento mais rapido da imagem-->
+        </section>
+               <!-- Criando a sessão da farmacia e pet shop-->
+        <section id="farmacia"> <!-- como nesta parte é somente um texto, não foi necessario colocar div ou qualquer outra coisa.-->
+                 <h2>Venha conferir o nosso petshop e farmácia</h2>
+                 <img src="img/shop-img.svg" alt="" width="645" height="430" loading="lazy">
+                   <p>
+                    Além de ser uma clínica veterinária de confiança, também contamos com um completo petshop e farmácia. Nosso
+                    petshop oferece uma ampla seleção de produtos de alta qualidade, desde alimentos balanceados e petiscos
+                    deliciosos até brinquedos divertidos e acessórios elegantes para o seu pet. Na nossa farmácia, você encontrará
+                    uma variedade de medicamentos, produtos de cuidados e suplementos recomendados pelos nossos veterinários,
+                    garantindo que o bem-estar e a saúde do seu amado pet estejam sempre em boas mãos. Tudo o que você precisa para
+                    cuidar e mimar o seu pet está aqui, no nosso petshop e farmácia, com a mesma dedicação e qualidade que nos
+                    tornou referência na área veterinária.
+                    </p>
+        </section>       
+                <!-- Seção de perguntas frequentes -->
+        <section id="duvidas"> <!-- Nesta seção, para cada "duvida" inseriada na pagina, sera feita um div, contendo 1 titulo, 1 imagem e 1 paragrafo.-->
+                 <img src="img/faq-img.svg" alt="" width="540" height="540" loading="lazy">
+                  <div>
+                    <h2>Ficou alguma dúvida?</h2>
+                  <div>
+                     <h3>Quais serviços são oferecidos pela clínica da PetLife?</h3>
+                      <img src="img/arrow-down.svg" alt="">
+                      <p>
+                       A clínica da PetLife oferece uma ampla gama de serviços, incluindo consultas de rotina, vacinação,
+                       cirurgias,tratamento de doenças, cuidados odontológicos, atendimento de emergência 24 horas, programas de prevenção de
+                       pulgas, carrapatos e vermes, entre outros. Nosso objetivo é fornecer cuidados abrangentes e personalizados para garantir a saúde e o bem-estar do seu pet.
+                     </p>
+                   </div>
+                   <div>
+                      <h3>Quais espécies de animais a clínica veterinária atende?</h3>
+                       <img src="img/arrow-down.svg" alt="">
+                       <p>
+                        A clínica veterinária da PetLife atende animais de estimação de todas as espécies, incluindo cães, gatos,
+                        pássaros, roedores e répteis. Nossos profissionais possuem conhecimento e experiência para cuidar de
+                        diferentes tipos de animais, oferecendo um atendimento especializado e dedicado a cada um deles.
+                       </p>
+                  </div>
+                  <div>
+                     <h3>A clínica da PetLife possui serviços de emergência?</h3>
+                      <img src="img/arrow-down.svg" alt="">
+                      <p>
+                       Sim, a clínica veterinária da PetLife oferece serviços de emergência 24 horas. Se o seu animal de estimação
+                       precisar de atendimento veterinário imediato fora do horário de expediente, nossa equipe está pronta para
+                       ajudar, fornecendo cuidados urgentes e tratamento adequado para garantir o bem-estar do seu pet.
+                       </p>
+                 </div>
+                 <div>
+                   <h3>A clínica oferece serviços de banho e tosa?</h3>
+                    <img src="img/arrow-down.svg" alt="">
+                     <p>
+                      Sim, a clínica veterinária da PetLife oferece serviços profissionais de banho e tosa. Nossa equipe de
+                     profissionais experientes garante que seu pet receba cuidados adequados, usando produtos de alta qualidade e
+                     técnicas seguras. O banho e tosa ajudam a manter a higiene, a saúde da pele e pelagem do seu pet, além de
+                     proporcionar uma experiência relaxante e agradável para eles.
+                    </p>
+                 </div>
+               </div>
+      </section>
+
+
+
+
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </header>
+
+</body>
+</html>
